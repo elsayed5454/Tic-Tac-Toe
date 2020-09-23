@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<!-- Required meta tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="tac.css">
+
+		<!-- Documentations required-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+		<title>Tic Tac Toe</title>
+
+	</head>
+
+	<div class="jumbotron jumbotron-fluid">
+
+  		<div class="container">
+    		<h1 class="display-4">Tic Tac Toe</h1>
+  		</div>
+
+		<!-- Multiple alerts shown to user on action -->
+  		<div class="alert alert-primary" role="alert">
+  			You won! Play again.
+		</div>
+		<div class="alert alert-dark" role="alert">
+	  		You lost! Try again.
+		</div>
+		<div class="alert alert-warning" role="alert">
+			Draw!
+		</div>
+		<div class="alert alert-danger" role="alert">
+			Choose Player vs Player OR Player vs Computer!!
+		</div>
+
+	</div>
+
+	<!-- Main board, modes choice and difficulty -->
+	<div class="container"> <div class="row">
+
+		<div class="col-md-3">
+
+			<!-- First mode: Player vs Computer -->
+			<div class="form-check">
+		  		<label class="form-check-label">
+		   			<input type="radio" class="form-check-input" id="AI" name="option">Player vs Computer
+			  	</label>
+			</div>
+
+			<!-- Difficulty choices -->
+			<div class="form-group">
+    			<label for="difficulty">Difficulty</label>
+    				<select onchange="choose_diff()" class="form-control" id="difficulty">
+				      	<option>Medium</option>
+				      	<option>Impossible</option>
+   				 	</select>
+  			</div>
+
+		</div>
+
+		<!-- Main board -->
+		<div class="col-md-6">
+			<table class="table">
+				<tbody>
+		    		<tr>
+				      <td class="square" id="0"></td>
+				      <td class="square" id="1"></td>
+				      <td class="square" id="2"></td>
+				    </tr>
+				    <tr>
+				      <td class="square" id="3"></td>
+				      <td class="square" id="4"></td>
+				      <td class="square" id="5"></td>
+				    </tr>
+				    <tr>
+				      <td class="square" id="6"></td>
+				      <td class="square" id="7"></td>
+				      <td class="square" id="8"></td>
+				    </tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="col-md-3">
+
+			<!-- Second mode: Player vs another player -->
+			<div class="form-check">
+		  		<label class="form-check-label">
+		   			<input type="radio" class="form-check-input" id="HUMAN" name="option">Player vs Player
+			  	</label>
+			</div>
+
+		</div>
+
+	</div> </div>
+
+
+	<div class="container"> <div class="row">
+
+		<div class="col-md-3"></div>
+
+		<!-- Score table -->
+		<div class="col-md-6">
+			<table class="table table-borderless table-sm">
+				<tbody>
+		    		<tr>
+				      <td class="score">Player1</td>
+				      <td class="score">Tie</td>
+				      <td class="score">Player2</td>
+				    </tr>
+				    <tr>
+				      <td id="p1_score" class="score"></td>
+				      <td id="tie_score" class="score"></td>
+				      <td id="p2_score" class="score"></td>
+				    </tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div> </div>
+
+	<script src="toc.js"></script>
+
+</html>

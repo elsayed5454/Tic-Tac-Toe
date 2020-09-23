@@ -1,0 +1,44 @@
+.jumbotron
+{
+	text-align: center;
+	height: 200px;
+}
+
+td
+{
+	height: 125px;
+	width: 80px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 65px;
+	cursor: pointer;
+}
+
+.form-group
+{
+	padding-top: 30px;
+	width: 150px;
+}
+
+.score
+{
+	font-size: 20px;
+	height: 5px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: auto;
+}
+
+/* Collapse table borders and hide them then reconfigure */
+.table
+{
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.table td, .table th
+{
+    border: 3px solid black;
+}
+
+
